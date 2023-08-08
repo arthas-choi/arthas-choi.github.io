@@ -50,7 +50,30 @@ const initMap = function () {
 
 }
 
+const kakao_navi = function () {
+  let userAgentInfo = navigator.userAgent;
+  let Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad",
+    "iPod"];
+  let flag = true;
+  for (var v = 0; v < Agents.length; v++) {
+    if (userAgentInfo.indexOf(Agents[v]) > 0) {
+      flag = false;    //如果是手机版本返回false
+      break;
+    }
+  }
 
+  if(flag) {
+    alert('모바일 기기 전용 기능입니다')
+  } else {
+  Kakao.init("23394778e57b179d0098d8231aa92b33");
+  Kakao.Navi.start({
+    name: '메르시앙웨딩홀', //목적지
+    x: 128.86878515119685,
+    y: 35.242526157924374,
+    coordType: 'wgs84'
+  });
+  }
+}
 </script>
 
 <template>
@@ -64,14 +87,14 @@ const initMap = function () {
         <li>
           <a
               target="_blank"
-              href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx20401a447f994002b83f0e74e5482a2d&name=김포웨딩부페&lon=127.00517884800654&lat=37.555954592538384"><img
+              href="https://apis.openapi.sk.com/tmap/app/routes?appKey=Raz1TF3nSOalrQT9dqbGZ3KiBXHwRJNr4yESZk5C&name=메르시앙웨딩&lon=128.8687851511968&lat=35.242526157924374"><img
               src="../assets/images/icon/tmap.png" alt="">
             <p>티맵</p></a></li>
-        <li><a href="#" onclick="kakao_navi();"><img src="../assets/images/icon/kakaonavi.png" alt="">
+        <li><a href="#" @click.prevent="kakao_navi"><img src="../assets/images/icon/kakaonavi.png" alt="">
           <p>카카오 내비</p></a></li>
-        <li><a href="http://kko.to/wI26dLjfT" target="_blank"><img src="../assets/images/icon/kakao.png" alt="">
+        <li><a href="http://kko.to/UhzdTzd0SN" target="_blank"><img src="../assets/images/icon/kakao.png" alt="">
           <p>카카오 맵</p></a></li>
-        <li><a href="https://map.naver.com/v5/directions/-/-/-/transit?c=14141453.2899228,4512164.5656315,15,0,0,0,dh"
+        <li><a href="https://map.naver.com/v5/directions/-/14345572.615555514,4196842.290666608,%EB%A9%94%EB%A5%B4%EC%8B%9C%EC%95%99%EC%9B%A8%EB%94%A9%ED%99%80,1148587003,PLACE_POI/-/transit?c=7,0,0,0,dh"
                target="_blank"><img src="../assets/images/icon/naver.png" alt="">
           <p>네이버 지도</p></a></li>
       </ul>
