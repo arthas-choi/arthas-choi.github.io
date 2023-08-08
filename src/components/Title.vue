@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="../assets/images/wedding/ty-4.jpg" alt="">
+    <img src="../assets/images/wedding/jj-4.jpg" alt="">
     <div class="titleText">
       <div class="container">
         <h2>최재환 <br>김지현</h2>

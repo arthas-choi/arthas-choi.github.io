@@ -19,7 +19,7 @@ const 장소 = '서울 상록아트홀 L층 그랜드볼룸홀';
       <li>최만호 김미숙<span>의 아들</span>&nbsp;최재환</li>
       <li>김대기 김임순<span>의 &nbsp;&nbsp;&nbsp;딸</span>&nbsp;김지현</li>
     </ul>
-    <img src="../assets/images/wedding/ty-2.jpg" alt="">
+    <img src="../assets/images/wedding/jj-2.jpg" alt="">
   </div>
 </template>
 

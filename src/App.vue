@@ -38,7 +38,6 @@ onMounted(() => {
     <WeddingMap/>
 
     <Call/>
-
 <!--    <Account/>-->
   </main>
 </template>

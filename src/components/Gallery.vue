@@ -1,18 +1,28 @@
 <script setup>
 import {ref} from "vue";
 
-import a from "@/assets/images/wedding/ty-1-1.jpg";
-import b from "@/assets/images/wedding/ty-2-1.jpg";
-import c from "@/assets/images/wedding/ty-3-1.jpg";
-import d from "@/assets/images/wedding/ty-4-1.jpg";
-import e from "@/assets/images/wedding/ty-1-2.jpg";
-import f from "@/assets/images/wedding/ty-2-2.jpg";
-import g from "@/assets/images/wedding/ty-3-2.jpg";
-import h from "@/assets/images/wedding/ty-4-2.jpg";
-import i from "@/assets/images/wedding/ty-1-3.jpg";
-import j from "@/assets/images/wedding/ty-2-3.jpg";
-import k from "@/assets/images/wedding/ty-3-3.jpg";
-import l from "@/assets/images/wedding/ty-1-4.jpg";
+import image1 from "@/assets/images/wedding/jj-10.jpg";
+import image2 from "@/assets/images/wedding/jj-11.jpg";
+import image3 from "@/assets/images/wedding/jj-12.jpg";
+import image4 from "@/assets/images/wedding/jj-13.jpg";
+import image5 from "@/assets/images/wedding/jj-14.jpg";
+import image6 from "@/assets/images/wedding/jj-15.jpg";
+import image7 from "@/assets/images/wedding/jj-16.jpg";
+import image8 from "@/assets/images/wedding/jj-17.jpg";
+import image9 from "@/assets/images/wedding/jj-18.jpg";
+import image10 from "@/assets/images/wedding/jj-19.jpg";
+import image11 from "@/assets/images/wedding/jj-20.jpg";
+import image12 from "@/assets/images/wedding/jj-21.jpg";
+import image13 from "@/assets/images/wedding/jj-22.jpg";
+import image14 from "@/assets/images/wedding/jj-23.jpg";
+import image15 from "@/assets/images/wedding/jj-24.jpg";
+import image16 from "@/assets/images/wedding/jj-25.jpg";
+import image17 from "@/assets/images/wedding/jj-26.jpg";
+import image18 from "@/assets/images/wedding/jj-27.jpg";
+import image19 from "@/assets/images/wedding/jj-28.jpg";
+
+
+
 const visibleRef = ref(false)
 const indexRef = ref(0) // default 0
 const imgsRef = ref([])
@@ -20,13 +30,47 @@ const imgsRef = ref([])
 
 
 const items = [
-  a,
-    b,c,d,e,f,g,h,i,j,k,l
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
+  image13,
+  image14,
+  image15,
+  image16,
+  image17,
+  image18,
+  image19
 ]
 
 imgsRef.value = [
-  a,
-  b,c,d,e,f,g,h,i,j,k,l
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
+  image13,
+  image14,
+  image15,
+  image16,
+  image17,
+  image18,
+  image19
 ];
 
 const onShow = (index) => {

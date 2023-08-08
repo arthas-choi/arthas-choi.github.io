@@ -1,38 +1,16 @@
-import Clipboard from 'clipboard'
-interface Options {
-    /** Fixes IE by appending element to body */
-    appendToBody: boolean
-}
-export default (opts?: Options) => {
-    // default appendToBody true
-    const appendToBody = opts?.appendToBody === undefined ? true : opts.appendToBody
-    return {
-        toClipboard(text: string, container?: HTMLElement) {
-            return new Promise((resolve, reject) => {
-                // make fake element
-                debugger
-                const fakeEl = document.createElement('button')
-                // setup a new Clipboard.js
-                const clipboard = new Clipboard(fakeEl, {
-                    text: () => text,
-                    action: () => 'copy',
-                    container: container !== undefined ? container : document.body
-                })
-                clipboard.on('success', (e) => {
-                    clipboard.destroy()
-                    resolve(e)
-                })
-                clipboard.on('error', (e) => {
-                    clipboard.destroy()
-                    reject(e)
-                })
-                // appendToBody fixes IE
-                if (appendToBody) document.body.appendChild(fakeEl)
-                // simulate click
-                fakeEl.click()
-                // remove from body if appended
-                if (appendToBody) document.body.removeChild(fakeEl)
-            })
-        }
+export const copyToClipboard = (text: string) => {
+     if (text === null) { return }
+    if (!navigator.clipboard) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.cssText = 'position:absolute;left:-9999px;top:-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+    } else {
+        navigator.clipboard.writeText(text);
     }
-}
+
+    alert("계좌번호 " + text + " 가 복사되었습니다.")
+};
