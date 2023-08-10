@@ -32,15 +32,10 @@ const groomOpen = () => {
     title: "신랑측 계좌번호",
     accounts: [
       {
-        name : '이름1',
-        bankName : '기업은행',
-        bankAccount : '111-1111-1111-111'
-      },
-      {
-        name : '이름2',
-        bankName : '국민은행',
-        bankAccount : '222-2222-2222-2222'
-      },
+        name : '모)김미숙',
+        bankName : '농협',
+        bankAccount : '356-1058-7101-83'
+      }
     ]
   }
   options.value.modelValue = true;

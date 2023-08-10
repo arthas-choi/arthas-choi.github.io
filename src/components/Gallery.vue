@@ -40,14 +40,11 @@ const items = [
   image8,
   image9,
   image10,
-  image11,
   image12,
   image13,
   image14,
   image15,
   image16,
-  image17,
-  image18,
   image19
 ]
 
@@ -62,14 +59,11 @@ imgsRef.value = [
   image8,
   image9,
   image10,
-  image11,
   image12,
   image13,
   image14,
   image15,
   image16,
-  image17,
-  image18,
   image19
 ];
 
@@ -104,6 +98,9 @@ const onHide = () => (visibleRef.value = false)
 </template>
 
 <style scoped>
+.gallery {
+  padding-bottom: 30px;
+}
 .gallery figure{
   width: 100%;
   height: 210px;
@@ -125,5 +122,6 @@ const onHide = () => (visibleRef.value = false)
 
 .masonry-item button {
   border: none;
+  background-color: #F3F5F1;
 }
 </style>

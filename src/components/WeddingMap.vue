@@ -105,7 +105,7 @@ const kakao_navi = function () {
 
 <style scoped>
 .wedding_map {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 .map {
