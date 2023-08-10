@@ -79,7 +79,7 @@ const onHide = () => (visibleRef.value = false)
 <template>
     <div class="container gallery">
       <h2>GALLERY</h2>
-      <masonry-wall :items="items"  :min-columns="3" :max-columns="3" :gap="10">
+      <masonry-wall :items="items"  :min-columns="2" :max-columns="2" :gap="10">
         <template #default="{ item, index }">
           <button @click="onShow(index)">
           <img :src="item"  alt="">
