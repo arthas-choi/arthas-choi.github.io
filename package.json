@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@soerenmartius/vue3-clipboard": "^0.1.2",
+    "@vueuse/sound": "^2.0.1",
     "@yeger/vue-masonry-wall": "^4.2.1",
     "bowser": "^2.11.0",
     "photoswipe": "^5.3.8",

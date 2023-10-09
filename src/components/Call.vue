@@ -72,7 +72,6 @@ const onCopyError = () => {
 
 const onCopyClick = async (bankAccount) => {
   try {
-    console.log(bankAccount)
     copyToClipboard(bankAccount);
         console.log('Copied to clipboard')
   } catch (e) {
@@ -159,11 +158,13 @@ const onCopyClick = async (bankAccount) => {
 </template>
 
 <style scoped>
-
+.container {
+  margin-bottom: 80px;
+}
 .call .phone{
   text-align: center;
   height: 160px;
-}
+  }
 .call .phone li{
   display: inline-block;
   padding-top: 45px;
