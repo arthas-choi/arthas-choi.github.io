@@ -12,24 +12,22 @@ import bgm from '@/assets/sounds/bgm.mp3'
 import volume_off_img from "@/assets/images/icon/volume-off.png";
 import volume_on_img from "@/assets/images/icon/volume-on.png";
 import copy from "@/assets/images/icon/copy.png";
-import {copyToClipboard, copyToClipboard2} from "@/components/composable";
-const { play, stop } = useSound(bgm, {
-  loop: true
+import {copyToClipboard2} from "@/components/composable";
+
+const { play, stop, isPlaying } = useSound(bgm, {
+  loop: true,
 })
 
-const bgmPlay = ref(false);
-
 const handleBGMClick = () => {
-  if(bgmPlay.value) {
+  if(isPlaying.value) {
     stop()
   } else {
     play();
   }
-  bgmPlay.value = !bgmPlay.value;
 }
 
 const bgmImage = computed(() => {
-  if(bgmPlay.value) {
+  if(isPlaying.value) {
     return volume_off_img;
   } else {
     return volume_on_img;
@@ -37,7 +35,7 @@ const bgmImage = computed(() => {
 })
 
 const bgmText = computed(() => {
-  if(bgmPlay.value) {
+  if(isPlaying.value) {
     return "음악 끄기";
   } else {
     return "음악 켜기";
@@ -91,6 +89,7 @@ onMounted(() => {
       <span> 청첩장 공유</span>
     </Button>
   </div>
+
 </template>
 
 <style scoped>
