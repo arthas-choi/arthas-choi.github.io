@@ -40,6 +40,11 @@ const groomOpen = () => {
         name : '모)김미숙',
         bankName : '농협',
         bankAccount : '356-1058-7101-83'
+      },
+      {
+        name : '최재환',
+        bankName : '카카오뱅크',
+        bankAccount : '3333-02-5992814'
       }
     ]
   }
@@ -57,6 +62,11 @@ const brideOpen = () => {
         bankName : '(구)외환',
         bankAccount : '259-890218-75007'
       },
+      {
+        name : '신부) 김지현',
+        bankName : '기업은행',
+        bankAccount : '010-4028-2252'
+      }
     ]
   }
   options.value.modelValue = true;
