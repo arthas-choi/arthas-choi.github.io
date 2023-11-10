@@ -59,7 +59,7 @@ const brideOpen = () => {
     accounts: [
       {
         name : '부) 김대기',
-        bankName : '(구)외환',
+        bankName : '하나은행',
         bankAccount : '259-890218-75007'
       },
       {
